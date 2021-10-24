@@ -27,12 +27,12 @@ class Credentials:
         delete_user_credentials method deletes a saved credentials from the credentials_list
         '''
 
-        User.user_list.remove(self) 
+        Credentials.credentials_list.remove(self) 
         
     @classmethod
-    def display_users(cls):
+    def display_all_accounts(cls):
         '''
-        method that returns the user list
+        method that returns the credentials list
         '''
-        return cls.user_list        
+        return cls.credentials_list   
       
