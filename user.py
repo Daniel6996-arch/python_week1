@@ -31,4 +31,5 @@ class User:
         '''
         method that returns the user list
         '''
-        return cls.user_list           
+        return cls.user_list        
+      
