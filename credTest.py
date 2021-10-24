@@ -1,5 +1,5 @@
 import unittest #import the unittest module
-from credentials import Credentials #import the User class  from user module
+from credentials import Credentials #import the Credentials class  from credentials module
 
 class TestCreds(unittest.TestCase):
 
@@ -7,7 +7,7 @@ class TestCreds(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_account = Credentials("Twitter","John-arch","john.arch@email.com","1234567890k") # create user objec
+        self.new_account = Credentials("Twitter","John-arch","john.arch@email.com","1234567890k") # create account object
     
     def test_init(self):
         '''
@@ -39,7 +39,7 @@ class TestCreds(unittest.TestCase):
             objects to our accounts_list
             '''
             self.new_account.save_user_account()
-            test_account = Credentials("Twit","Ian-arc","john.arch@email.com","1234567890k") # new user
+            test_account = Credentials("Twit","Ian-arc","john.arch@email.com","1234567890k") # new user_account
             test_account.save_user_account()
             self.assertEqual(len(Credentials.accounts_list),2)
 
@@ -48,10 +48,10 @@ class TestCreds(unittest.TestCase):
             test_delete_user_account to test if we can remove an account from our account list
             '''
             self.new_account.save_user_account()
-            test_account = Credentials("Twit","Ian-arc","john.arch@email.com","1234567890k") # new user
+            test_account = Credentials("Twit","Ian-arc","john.arch@email.com","1234567890k") # new user_account
             test_account.save_user_account()
 
-            self.new_account.delete_user_account()# Deleting a user object
+            self.new_account.delete_user_account()# Deleting a user_account object
             self.assertEqual(len(Credentials.accounts_list),1) 
 
     def test_display_accounts(self):
