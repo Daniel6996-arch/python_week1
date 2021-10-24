@@ -6,7 +6,22 @@ class User:
 
 
     def __init__(self,user_name,password):
-        """create arguments for self
+        """
+        create arguments for self
         """
         self.user_name = user_name
         self.password = password
+
+    def save_user(self):
+        """ 
+        save_user method saves user objects into user_list
+        """
+        User.user_list.append(self)
+
+    def delete_contact(self):
+
+        '''
+        delete_user method deletes a saved user from the user_list
+        '''
+
+        User.user_list.remove(self)    
