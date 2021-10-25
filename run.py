@@ -51,6 +51,46 @@ def display_accounts():
     Function that returns all the saved accounts
     '''
     return Credentials.display_accounts()
+
+
+
+
+def main():
+    print("Hello and  Welcome to password locker app. What is your name?")
+    user_name = input()
+    print ("\n")
+
+    print("Set password for you locker app")
+    password = input()
+    print ("\n")
+
+    print("Please login to your account")
+    print ("\n")
+
+    print("Enter username")
+    username = input()
+    print("\n")
+
+    print("Enter password")
+    pword = input()
+    print("\n")
+
+    if username == user_name and pword == password:
+
+      print(f"Hello {user_name}. What would you like to do?")
+      print("\n")
+    else:
+        print("Wrong password or username")
+      
+        
+    
+
+
+
+
+if __name__ == '__main__':
+
+    main()  
  
 
 
