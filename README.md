@@ -2,6 +2,11 @@
 #### By **{Daniel6996-arch}**
 ## Description
 {The application stores account credentials for users}  
+## BDD
+*The user should be able to a create an account and be able to login.  
+*The user should be able to add or create credentials for an account.  
+*The user should be able to see the list of credentials for different accounts.  
+*The user should be able to delete credentials for an account that they no longer use.  
 ## Setup/Installation Requirements
 *This application is a script that runs on the command line.   
 ## Support and contact details
