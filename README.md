@@ -1,4 +1,3 @@
-
 #### {This is a password locker application}, {25/10/2021}
 #### By **{Daniel6996-arch}**
 ## Description
