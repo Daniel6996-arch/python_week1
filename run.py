@@ -143,15 +143,11 @@ def main():
                     print("You don't seem to have any crdentials for account saved")
                     print('\n')
 
-            elif short_code == 'del~acc':
-                               
-
-
-   
-
-        
-    
-
+            elif short_code == 'exit':
+                print("Bye.............")
+                break
+            else:
+                print("I really didn't get that. Please use the short codes")    
 
 
 
