@@ -81,7 +81,74 @@ def main():
       print("\n")
     else:
         print("Wrong password or username")
-      
+
+        while True:
+            print("Use these short codes : a~acc - add existing account credentials , c~acc - create new account credentials, d~acc - display accounts, del~acc - delete account, exit -exit the accounts list ")
+            short_code = input().lower()
+            if short_code == 'a~acc':
+                print("Add existing account credentials")
+                print("-"*10)
+
+                print("Account name ....")
+                a_name = input()
+
+                print("User name .....")
+                u_name = input()
+
+                print("Login Email address")
+                e_address = input()
+
+                print("Login password")
+                l_password = input()
+
+
+                save_acc(create_creds(a_name,u_name,e_address,l_password))
+                print ("\n")
+                print(f"Account {a_name} {u_name} {e_address} {l_password} added successfully")
+                print("\n")
+
+            elif short_code == 'c~acc':
+                print("Create new account credentials")
+                print("-"*10)
+
+                print("Account name ....")
+                a_name = input()
+
+                print("User name .....")
+                u_name = input()
+
+                print("Login Email address")
+                e_address = input()
+
+                print("Login password")
+                l_password = input()
+
+
+                save_acc(create_creds(a_name,u_name,e_address,l_password))
+                print ("\n")
+                print(f"Account {a_name} {u_name} {e_address} {l_password} added successfully")
+                print("\n")
+
+            elif short_code == 'd-acc':
+                if display_accounts():
+                    print("Here is a list of all your accounts")
+                    print('\n')
+
+                    for account in display_accounts():
+                        print(f"Account: {account.account_name} Username: {account.user_name} Login Email: {account.email} Loggin password: {account.password}")
+
+                    print('\n')
+                else:
+                    print('\n')
+                    print("You don't seem to have any crdentials for account saved")
+                    print('\n')
+
+            elif short_code == 'del~acc':
+                               
+
+
+   
+
         
     
 
