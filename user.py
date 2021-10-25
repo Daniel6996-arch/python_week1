@@ -34,8 +34,6 @@ class User:
         return cls.user_list        
       
 
-
-
 class Credentials:
     """
     Class that generates new instances of credentials.
