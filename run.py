@@ -79,10 +79,8 @@ def main():
 
       print(f"Hello {user_name}. What would you like to do?")
       print("\n")
-    else:
-        print("Wrong password or username")
 
-        while True:
+      while True:
             print("Use these short codes : a~acc - add existing account credentials , c~acc - create new account credentials, d~acc - display accounts, del~acc - delete account, exit -exit the accounts list ")
             short_code = input().lower()
             if short_code == 'a~acc':
@@ -129,13 +127,13 @@ def main():
                 print(f"Account {a_name} {u_name} {e_address} {l_password} added successfully")
                 print("\n")
 
-            elif short_code == 'd-acc':
+            elif short_code == 'd~acc':
                 if display_accounts():
                     print("Here is a list of all your accounts")
                     print('\n')
 
                     for account in display_accounts():
-                        print(f"Account: {account.account_name} Username: {account.user_name} Login Email: {account.email} Loggin password: {account.password}")
+                        print(f"Account: {account.account_name} | Username: {account.user_name} | Login Email: {account.email} | Loggin password: {account.password}")
 
                     print('\n')
                 else:
@@ -148,7 +146,6 @@ def main():
                 break
             else:
                 print("I really didn't get that. Please use the short codes")    
-
 
 
 if __name__ == '__main__':
