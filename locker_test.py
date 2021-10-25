@@ -1,6 +1,6 @@
 import unittest #import the unittest module
-from user import User #import the User class  from user module
-from user import Credentials #import the Credentials class  from credentials module
+from locker import User #import the User class  from user module
+from locker import Credentials #import the Credentials class  from credentials module
 
 class TestUser(unittest.TestCase):
 
