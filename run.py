@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.6
+import random
 from locker import User
 from locker import Credentials
 
@@ -55,8 +56,9 @@ def display_accounts():
 
 
 
+
 def main():
-    print("Hello and  Welcome to password locker app. What is your name?")
+    print("Hello and  Welcome to password locker app. What is your Username?")
     user_name = input()
     print ("\n")
 
@@ -83,7 +85,7 @@ def main():
       while True:
             print("Use these short codes : a~acc - add existing account credentials , c~acc - create new account credentials, d~acc - display accounts, del~acc - delete account, exit -exit the accounts list ")
             short_code = input().lower()
-            if short_code == 'a~acc':
+            if short_code == 'c~acc':
                 print("Add existing account credentials")
                 print("-"*10)
 
@@ -95,9 +97,11 @@ def main():
 
                 print("Login Email address")
                 e_address = input()
-
+               
                 print("Login password")
                 l_password = input()
+
+                
 
 
                 save_acc(create_creds(a_name,u_name,e_address,l_password))
@@ -105,7 +109,7 @@ def main():
                 print(f"Account {a_name} {u_name} {e_address} {l_password} added successfully")
                 print("\n")
 
-            elif short_code == 'c~acc':
+            elif short_code == 'a~acc':
                 print("Create new account credentials")
                 print("-"*10)
 
