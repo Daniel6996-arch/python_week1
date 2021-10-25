@@ -141,11 +141,23 @@ def main():
                     print("You don't seem to have any crdentials for account saved")
                     print('\n')
 
+            elif short_code == 'del~acc':
+                print("Enter account name to delete account")
+                a_name = input()
+
+                if account.account_name == a_name:
+                    del_account(account)
+                    print(f"{a_name} account has been deleted successfully")
+                    print("\n")
+                 
             elif short_code == 'exit':
                 print("Bye.............")
                 break
             else:
-                print("I really didn't get that. Please use the short codes")    
+                print("I really didn't get that. Please use the short codes")  
+
+    else:
+        print("Invalid username or password. Please try again")          
 
 
 if __name__ == '__main__':
